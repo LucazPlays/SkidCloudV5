@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CloudApi:jar">
+    <output-path>$PROJECT_DIR$/../../v4</output-path>
+    <root id="archive" name="CloudApi.jar">
+      <element id="module-output" name="CloudApi" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Jars/libs/NetListening.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

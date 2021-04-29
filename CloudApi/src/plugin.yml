@@ -1,0 +1,4 @@
+name: CloudApi
+version: 1.0
+main: de.terrarier.terracloud.CloudApi
+author: Terrarier2111
