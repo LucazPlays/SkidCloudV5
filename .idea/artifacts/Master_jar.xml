@@ -3,12 +3,12 @@
     <output-path>$PROJECT_DIR$/../../v4</output-path>
     <root id="archive" name="Master.jar">
       <element id="module-output" name="Master" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/fusesource/jansi/jansi/2.3.1/jansi-2.3.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jline/jline-reader/3.19.0/jline-reader-3.19.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.12.8/mongo-java-driver-3.12.8.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../../Jars/libs/NetListening.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jline/jline-terminal/3.19.0/jline-terminal-3.19.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.63.Final/netty-all-4.1.63.Final.jar" path-in-jar="/" />
+      <element id="library" level="project" name="NetListening" />
+      <element id="library" level="project" name="Maven: org.fusesource.jansi:jansi:2.3.2" />
     </root>
   </artifact>
 </component>

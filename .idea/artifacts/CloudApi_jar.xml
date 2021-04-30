@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/../../v4</output-path>
     <root id="archive" name="CloudApi.jar">
       <element id="module-output" name="CloudApi" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../../Jars/libs/NetListening.jar" path-in-jar="/" />
+      <element id="library" level="project" name="NetListening" />
     </root>
   </artifact>
 </component>
