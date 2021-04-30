@@ -63,21 +63,22 @@ public final class StartServer implements Runnable {
             e.printStackTrace();
         }
         final ProcessBuilder process;
-        if(OSType.getOSType() == OSType.LINUX) {
+        // TODO: Implement native process api for linux!
+        /*if(OSType.getOSType() == OSType.LINUX) {
             process = new ProcessBuilder(Arrays.asList("nice", "-n", "19", "java",
                     "-Dname=s_" + this.group.getName() + "-" + this.id, "-Djline.terminal=jline.UnsupportedTerminal",
                     "-Dfile.encoding=UTF-8", "-Dio.netty.leakDetectionLevel=DISABLED", "-Xms" + this.group.getMemory() + "M",
                     "-Xmx" + this.group.getMemory() + "M", "-XX:+UseG1GC", "-XX:MaxGCPauseMillis=50", "-XX:MaxPermSize=256M",
-                    "-XX:+HeapDumpOnOutOfMemoryError", /*"-nogui", */"-jar",
+                    "-XX:+HeapDumpOnOutOfMemoryError", "-jar",
                     path + "/Spigot.jar"));
-        }else {
+        }else {*/
             process = new ProcessBuilder(Arrays.asList("java",
                     "-Dname=s_" + this.group.getName() + "-" + this.id, "-Djline.terminal=jline.UnsupportedTerminal",
                     "-Dfile.encoding=UTF-8", "-Dio.netty.leakDetectionLevel=DISABLED", "-Xms" + this.group.getMemory() + "M",
                     "-Xmx" + this.group.getMemory() + "M", "-XX:+UseG1GC", "-XX:MaxGCPauseMillis=50", "-XX:MaxPermSize=256M",
                     "-XX:+HeapDumpOnOutOfMemoryError", /*"-nogui", */"-jar",
                     path + "/Spigot.jar"));
-        }
+       // }
         process.directory(file);
         process.redirectErrorStream();
         try {
