@@ -93,7 +93,7 @@ public class CloudApi extends JavaPlugin {
                 }
             });
         }
-        Runtime.getRuntime().addShutdownHook(new Thread(client::disconnect));
+        Runtime.getRuntime().addShutdownHook(new Thread(client::stop));
         CustomPayloadUtil.init(client);
     }
 
