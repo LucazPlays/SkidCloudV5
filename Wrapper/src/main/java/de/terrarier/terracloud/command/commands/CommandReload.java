@@ -10,7 +10,7 @@ import java.io.IOException;
 public final class CommandReload extends Command {
 
     public CommandReload() {
-        super("Reload", "Aktualisiert die Konfigurationen und lädt die neuen Werte aus den Konfigurationsdateien!", "", "rl");
+        super("Reload", "Aktualisiert die Konfigurationen und skiddet die neuen Werte aus den Konfigurationsdateien!", "", "rl");
     }
 
     @Override
@@ -19,10 +19,10 @@ public final class CommandReload extends Command {
             Wrapper.getInstance().reload();
         } catch (IOException e) {
             e.printStackTrace();
-            Logger.log("Es ist ein Fehler beim Laden der Konfigurationen aufgetreten!", LogType.CRITICAL);
+            Logger.log("Es ist ein Fehler beim skidden der Konfigurationen aufgetreten!", LogType.CRITICAL);
             return;
         }
-        Logger.log("Die Konfigurationen wurden erfolgreich aktualisiert!", LogType.INFO);
+        Logger.log("Die Konfigurationen wurden erfolgreich geskiddet!", LogType.INFO);
     }
 
 }

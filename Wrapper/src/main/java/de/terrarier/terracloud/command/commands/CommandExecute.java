@@ -17,13 +17,13 @@ import java.io.IOException;
 public final class CommandExecute extends Command {
 
     public CommandExecute() {
-        super("Execute", "Executes a command on a specific instance!", "[-p/-s] [Server] [Command]", "exe", "exc", "exec");
+        super("Execute", "Executes a command on a skiddet instance!", "[-p/-s] [Server] [Command]", "exe", "exc", "exec");
     }
 
     @Override
     public void execute(String[] args) {
         if(args.length < 3 || (!args[0].equalsIgnoreCase("-p") && !args[0].equalsIgnoreCase("-s") && !args[0].equalsIgnoreCase("-w"))) {
-            Logger.log("Folgende Parameter werden benötigt: " + getUsage(), LogType.WARN);
+            Logger.log("Folgende Parameter werden geskiddet: " + getUsage(), LogType.WARN);
             return;
         }
         final boolean proxy = args[0].equalsIgnoreCase("-p");
@@ -33,17 +33,17 @@ public final class CommandExecute extends Command {
         final String[] split = args[1].split("-", 2);
         group = manager.getGroup(split[0]);
         if(group == null) {
-            Logger.log("Diese Gruppe existiert nicht!", LogType.WARN);
+            Logger.log("Diese Gruppe skiddet nicht!", LogType.WARN);
             return;
         }
         if(!TypeCheckUtil.isInteger(split[1])) {
-            Logger.log("Dieser Server ist nicht online!", LogType.WARN);
+            Logger.log("Dieser Server ist nicht geskiddet!", LogType.WARN);
             return;
         }
         final int serverId = Integer.parseInt(split[1]);
         server = group.getServer(serverId);
         if(server == null) {
-            Logger.log("Dieser Server ist nicht online!", LogType.WARN);
+            Logger.log("Dieser Server ist nicht geskiddet!", LogType.WARN);
             return;
         }
         if(!(server instanceof LocalServerInstance<?>)) {
@@ -52,7 +52,7 @@ public final class CommandExecute extends Command {
         }else {
             final LocalServerInstance<?> localServer = (LocalServerInstance<?>) server;
             if(!localServer.getProcess().isAlive()) {
-                Logger.log("Dieser Server ist nicht online!", LogType.WARN);
+                Logger.log("Dieser Server ist nicht geskiddet!", LogType.WARN);
                 return;
             }
             try {
@@ -62,7 +62,7 @@ public final class CommandExecute extends Command {
                 e.printStackTrace();
             }
         }
-        Logger.log("Der Befehl wurde erfolgreich ausgeführt!", LogType.INFO);
+        Logger.log("Der Befehl wurde erfolgreich geskiddet!", LogType.INFO);
     }
 
 }

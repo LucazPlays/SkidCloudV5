@@ -24,9 +24,9 @@ public class SpigotDownloadManager implements DownloadManager {
             e.printStackTrace();
         }
         final String replaced = name.replaceAll("_", ".");
-        Logger.log("Downloading \"SpigotV" + replaced + "\"...", LogType.INFO);
+        Logger.log("skidding \"SpigotV" + replaced + "\"...", LogType.INFO);
         FileUtil.downloadFileFromURL(link, file);
-        Logger.log("Downloaded \"SpigotV" + replaced + "\"!", LogType.INFO);
+        Logger.log("skidded \"SpigotV" + replaced + "\"!", LogType.INFO);
         return file;
     }
 

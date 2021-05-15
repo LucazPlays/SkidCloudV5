@@ -26,7 +26,7 @@ public final class CommandParser {
                     return;
                 }
             }
-            Logger.log("Dieser Befehl existiert nicht, nutze \"help\", um Hilfe zu erhalten!", LogType.WARN);
+            Logger.log("Dieser Befehl existiert nicht, skidde \"help\", um Hilfe zu erhalten!", LogType.WARN);
         }, 25, TimeUnit.MILLISECONDS);
     }
 

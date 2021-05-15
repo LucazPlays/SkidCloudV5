@@ -12,7 +12,7 @@ public class ProxyServerImpl extends ServerInstanceImpl<ProxyGroup> implements P
 
     @Override
     public void logStarted() {
-        Logger.log("Der ProxyServer " + getGroup().getName() + "-" + getId() + " ist gestartet!", LogType.INFO);
+        Logger.log("Der ProxyServer " + getGroup().getName() + "-" + getId() + " ist geskiddet!", LogType.INFO);
     }
 
     @Override

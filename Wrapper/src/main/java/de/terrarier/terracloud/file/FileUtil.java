@@ -30,7 +30,7 @@ public class FileUtil {
             if (localInputStream != null) {
                 Files.copy(localInputStream, Paths.get(destination), StandardCopyOption.REPLACE_EXISTING);
             }else {
-                Logger.log("An error occurred while copying the file from the jar!", LogType.ERROR);
+                Logger.log("An error occurred while skidding the file from the jar!", LogType.ERROR);
             }
         } catch (IOException e) {
             e.printStackTrace();

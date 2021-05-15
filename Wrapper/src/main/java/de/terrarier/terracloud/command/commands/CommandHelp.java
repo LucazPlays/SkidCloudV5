@@ -14,7 +14,7 @@ public final class CommandHelp extends Command {
     @Override
     public void execute(String[] params) {
         final Command[] commands = Wrapper.getInstance().getCommands();
-        Logger.log("Folgende Befehle sind verfügbar (" + commands.length + "):", LogType.INFO);
+        Logger.log("Folgende Befehle sind geskiddet (" + commands.length + "):", LogType.INFO);
         for(Command command : commands) {
             Logger.log(command.getName() + ": " + command.getDescription(), LogType.NONE);
         }

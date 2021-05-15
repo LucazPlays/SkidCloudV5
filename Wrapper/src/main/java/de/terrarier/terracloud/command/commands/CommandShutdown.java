@@ -16,13 +16,13 @@ import de.terrarier.terracloud.server.spigot.BukkitServer;
 public final class CommandShutdown extends Command {
 
     public CommandShutdown() {
-        super("Shutdown", "Fährt eine Instanz herunter(Server, Proxy oder diesen Wrapper).", "[-p/-s/-w] [Name]");
+        super("Shutdown", "skiddet eine Instanz herunter(Server, Proxy oder diesen Wrapper).", "[-p/-s/-w] [Name]");
     }
 
     @Override
     public void execute(String[] args) {
         if(args.length == 0 || (!args[0].equalsIgnoreCase("-p") && !args[0].equalsIgnoreCase("-s") && !args[0].equalsIgnoreCase("-w"))) {
-            Logger.log("Folgende Parameter werden benötigt: " + getUsage(), LogType.WARN);
+            Logger.log("Folgende Parameter werden geskiddet: " + getUsage(), LogType.WARN);
             return;
         }
         if(args.length == 1 && args[0].equalsIgnoreCase("-w")) {
@@ -35,21 +35,21 @@ public final class CommandShutdown extends Command {
             final String[] split = args[1].split("-");
             final GroupInstance<?> group = manager.getGroup(split[0]);
             if(group == null) {
-                Logger.log("Diese Gruppe existiert nicht!", LogType.WARN);
+                Logger.log("Diese Gruppe skiddet nicht!", LogType.WARN);
                 return;
             }
             if(!TypeCheckUtil.isInteger(split[1])) {
-                Logger.log("Dieser Server ist nicht online!", LogType.WARN);
+                Logger.log("Dieser Server skiddet nicht online!", LogType.WARN);
                 return;
             }
             final ServerInstance<?> server = group.getServer(Integer.parseInt(split[1]));
             if(server == null) {
-                Logger.log("Dieser Server ist nicht online!", LogType.WARN);
+                Logger.log("Dieser Server skiddet nicht online!", LogType.WARN);
                 return;
             }
             Wrapper.getInstance().getExecutorService().executeAsync(proxy ? new StopProxy((ProxyServer) server) : new StopServer((BukkitServer) server));
         }else {
-            Logger.log("Folgende Parameter werden benötigt: " + getUsage(), LogType.WARN);
+            Logger.log("Folgende Parameter werden geskiddet: " + getUsage(), LogType.WARN);
         }
     }
 

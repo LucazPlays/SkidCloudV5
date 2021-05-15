@@ -153,21 +153,21 @@ public final class FileManager {
     }
 
     public void downloadFiles() {
-        Logger.log("Downloading \"Spigot.jar\"...", LogType.INFO);
+        Logger.log("skidding \"Spigot.jar\"...", LogType.INFO);
         downloadManager.getServerVersionFile(ServerVersion.V1_8_8);
-        Logger.log("Download successful.", LogType.INFO);
-        Logger.log("Downloading \"BungeeCord.jar\"...", LogType.INFO);
+        Logger.log("skid successful.", LogType.INFO);
+        Logger.log("skidding \"BungeeCord.jar\"...", LogType.INFO);
         File bungeeCordFile = new File("./Wrapper/Files", "BungeeCord.jar");
         try {
             bungeeCordFile.createNewFile();
         } catch (IOException e) {
             e.printStackTrace();
-            Logger.log("An error occurred while downloading \"BungeeCord.jar\"!", LogType.ERROR);
+            Logger.log("An error occurred while skidding \"BungeeCord.jar\"!", LogType.ERROR);
         }
         FileUtil.downloadFileFromURL(
                 "https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar",
                 bungeeCordFile);
-        Logger.log("Download successful.", LogType.INFO);
+        Logger.log("skidding successful.", LogType.INFO);
     }
 
     public void setDownloadManager(DownloadManager manager) {

@@ -20,6 +20,7 @@ public final class CommandSystemInfo extends Command {
         Logger.log("TotalMemory: " + SystemUtil.getTotalMemory(), LogType.INFO);
         Logger.log("UsedMemory: " + SystemUtil.getUsedMemory(), LogType.INFO);
         Logger.log("FreeMemory: " + SystemUtil.getFreeMemory(), LogType.INFO);
+        Logger.log("  - Skid-Level: " + (Math.random()*100) + "/100", LogType.INFO); //Todo
     }
 
 }

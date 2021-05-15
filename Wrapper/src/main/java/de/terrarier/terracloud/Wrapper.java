@@ -96,7 +96,7 @@ public class Wrapper {
 			Bootstrap.shutdown();
 			return;
 		}
-		Logger.log(Color.YELLOW + "Der Wrapper wird gestartet...", LogType.INFO);
+		Logger.log(Color.YELLOW + "Der Skidder wird gestartet...", LogType.INFO);
 		Logger.log(Color.DARK_RED + " _______                   _____ _                 _ ", LogType.NONE);
 		Logger.log(Color.DARK_RED + "|__   __|                 / ____| |               | |", LogType.NONE);
 		Logger.log(Color.DARK_RED + "   | | ___ _ __ _ __ __ _| |    | | ___  _   _  __| |", LogType.NONE);
@@ -191,7 +191,7 @@ public class Wrapper {
 		}
 		executorService.executeRepeating(() -> sendToMaster(new PacketLoadUpdate()), 10, 10, TimeUnit.SECONDS);
 
-		Logger.log(Color.DARK_GREEN + "Der Wrapper wurde gestartet!", LogType.INFO);
+		Logger.log(Color.DARK_GREEN + "Der Skidder wurde gestartet!", LogType.INFO);
 
 		logger.start();
 	}

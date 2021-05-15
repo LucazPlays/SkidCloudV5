@@ -31,10 +31,10 @@ public final class LocalBukkitServerImpl extends LocalServerInstance<ServerGroup
 				return;
 			}
 			final String serverName = group.getName() + "-" + id;
-			Logger.log("Der Server " + serverName + " wird eingefroren...", LogType.INFO);
+			Logger.log("Der Server " + serverName + " wird eingeskisddet...", LogType.INFO);
 			froze = true;
 			ProcessManager.executeAndDestroyProcess(new ProcessBuilder("pkill", "-STOP", "-f", serverName));
-			Logger.log("Der Server " + serverName + " wurde eingefroren.", LogType.INFO);
+			Logger.log("Der Server " + serverName + " wurde eingeskiddet.", LogType.INFO);
 		}
 	}
 
@@ -54,10 +54,10 @@ public final class LocalBukkitServerImpl extends LocalServerInstance<ServerGroup
 					return;
 				}
 				final String serverName = group.getName() + "-" + id;
-				Logger.log("Der Server " + serverName + " wird aufgewärmt...", LogType.INFO);
+				Logger.log("Der Server " + serverName + " wird aufgeskiddet...", LogType.INFO);
 				ProcessManager.executeAndDestroyProcess(
 						new ProcessBuilder("pkill", "-CONT", "-f" + serverName));
-				Logger.log("Der Server " + serverName + " wurde aufgewärmt.", LogType.INFO);
+				Logger.log("Der Server " + serverName + " wurde aufgeskiddet.", LogType.INFO);
 			} finally {
 				froze = false;
 			}
@@ -80,7 +80,7 @@ public final class LocalBukkitServerImpl extends LocalServerInstance<ServerGroup
 
 	@Override
 	public void logStarted() {
-		Logger.log("Der Server " + group.getName() + "-" + id + " ist gestartet!", LogType.INFO);
+		Logger.log("Der Server " + group.getName() + "-" + id + " ist geskiddet!", LogType.INFO);
 	}
 
 	@Override

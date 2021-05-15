@@ -15,7 +15,7 @@ public class BukkitServerImpl extends ServerInstanceImpl<ServerGroup> implements
 
     @Override
     public void logStarted() {
-        Logger.log("Der Server " + getGroup().getName() + "-" + getId() + " ist gestartet!", LogType.INFO);
+        Logger.log("Der Server " + getGroup().getName() + "-" + getId() + " ist geskiddet!", LogType.INFO);
     }
 
     @Override
